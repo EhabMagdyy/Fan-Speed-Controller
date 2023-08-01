@@ -1,0 +1,450 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"12 MCAL_Layer/Timer2/hal_timer2.c
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 12: Std_ReturnType timer2_intialize(const timer2_t *_timer){
+[c E3394 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 .. ]
+[n E3394 . TIMER2_POSTSCALER_DIV_1 TIMER2_POSTSCALER_DIV_2 TIMER2_POSTSCALER_DIV_3 TIMER2_POSTSCALER_DIV_4 TIMER2_POSTSCALER_DIV_5 TIMER2_POSTSCALER_DIV_6 TIMER2_POSTSCALER_DIV_7 TIMER2_POSTSCALER_DIV_8 TIMER2_POSTSCALER_DIV_9 TIMER2_POSTSCALER_DIV_10 TIMER2_POSTSCALER_DIV_11 TIMER2_POSTSCALER_DIV_12 TIMER2_POSTSCALER_DIV_13 TIMER2_POSTSCALER_DIV_14 TIMER2_POSTSCALER_DIV_15 TIMER2_POSTSCALER_DIV_16  ]
+[c E3389 0 1 2 .. ]
+[n E3389 . TIMER2_PRESCALER_DIV_1 TIMER2_PRESCALER_DIV_4 TIMER2_PRESCALER_DIV_16  ]
+"53 MCAL_Layer/Timer2/hal_timer2.h
+[; ;MCAL_Layer/Timer2/hal_timer2.h: 53: typedef struct{
+[s S273 `uc 1 `E3394 1 `E3389 1 ]
+[n S273 . preload_value postscaler_value prescaler_value ]
+"5043 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\../proc/pic18f4620.h
+[s S206 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S206 . T2CKPS TMR2ON TOUTPS ]
+"5048
+[s S207 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S207 . T2CKPS0 T2CKPS1 . T2OUTPS0 T2OUTPS1 T2OUTPS2 T2OUTPS3 ]
+"5042
+[u S205 `S206 1 `S207 1 ]
+[n S205 . . . ]
+"5058
+[v _T2CONbits `VS205 ~T0 @X0 0 e@4042 ]
+"5218
+[v _TMR2 `Vuc ~T0 @X0 0 e@4044 ]
+"55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\../proc/pic18f4620.h
+[; <" PORTA equ 0F80h ;# ">
+"192
+[; <" PORTB equ 0F81h ;# ">
+"363
+[; <" PORTC equ 0F82h ;# ">
+"538
+[; <" PORTD equ 0F83h ;# ">
+"680
+[; <" PORTE equ 0F84h ;# ">
+"883
+[; <" LATA equ 0F89h ;# ">
+"995
+[; <" LATB equ 0F8Ah ;# ">
+"1107
+[; <" LATC equ 0F8Bh ;# ">
+"1219
+[; <" LATD equ 0F8Ch ;# ">
+"1331
+[; <" LATE equ 0F8Dh ;# ">
+"1383
+[; <" TRISA equ 0F92h ;# ">
+"1388
+[; <" DDRA equ 0F92h ;# ">
+"1605
+[; <" TRISB equ 0F93h ;# ">
+"1610
+[; <" DDRB equ 0F93h ;# ">
+"1827
+[; <" TRISC equ 0F94h ;# ">
+"1832
+[; <" DDRC equ 0F94h ;# ">
+"2049
+[; <" TRISD equ 0F95h ;# ">
+"2054
+[; <" DDRD equ 0F95h ;# ">
+"2271
+[; <" TRISE equ 0F96h ;# ">
+"2276
+[; <" DDRE equ 0F96h ;# ">
+"2435
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"2500
+[; <" PIE1 equ 0F9Dh ;# ">
+"2577
+[; <" PIR1 equ 0F9Eh ;# ">
+"2654
+[; <" IPR1 equ 0F9Fh ;# ">
+"2731
+[; <" PIE2 equ 0FA0h ;# ">
+"2797
+[; <" PIR2 equ 0FA1h ;# ">
+"2863
+[; <" IPR2 equ 0FA2h ;# ">
+"2929
+[; <" EECON1 equ 0FA6h ;# ">
+"2995
+[; <" EECON2 equ 0FA7h ;# ">
+"3002
+[; <" EEDATA equ 0FA8h ;# ">
+"3009
+[; <" EEADR equ 0FA9h ;# ">
+"3016
+[; <" EEADRH equ 0FAAh ;# ">
+"3023
+[; <" RCSTA equ 0FABh ;# ">
+"3028
+[; <" RCSTA1 equ 0FABh ;# ">
+"3233
+[; <" TXSTA equ 0FACh ;# ">
+"3238
+[; <" TXSTA1 equ 0FACh ;# ">
+"3489
+[; <" TXREG equ 0FADh ;# ">
+"3494
+[; <" TXREG1 equ 0FADh ;# ">
+"3501
+[; <" RCREG equ 0FAEh ;# ">
+"3506
+[; <" RCREG1 equ 0FAEh ;# ">
+"3513
+[; <" SPBRG equ 0FAFh ;# ">
+"3518
+[; <" SPBRG1 equ 0FAFh ;# ">
+"3525
+[; <" SPBRGH equ 0FB0h ;# ">
+"3532
+[; <" T3CON equ 0FB1h ;# ">
+"3644
+[; <" TMR3 equ 0FB2h ;# ">
+"3651
+[; <" TMR3L equ 0FB2h ;# ">
+"3658
+[; <" TMR3H equ 0FB3h ;# ">
+"3665
+[; <" CMCON equ 0FB4h ;# ">
+"3755
+[; <" CVRCON equ 0FB5h ;# ">
+"3834
+[; <" ECCP1AS equ 0FB6h ;# ">
+"3916
+[; <" PWM1CON equ 0FB7h ;# ">
+"3986
+[; <" BAUDCON equ 0FB8h ;# ">
+"3991
+[; <" BAUDCTL equ 0FB8h ;# ">
+"4158
+[; <" CCP2CON equ 0FBAh ;# ">
+"4237
+[; <" CCPR2 equ 0FBBh ;# ">
+"4244
+[; <" CCPR2L equ 0FBBh ;# ">
+"4251
+[; <" CCPR2H equ 0FBCh ;# ">
+"4258
+[; <" CCP1CON equ 0FBDh ;# ">
+"4355
+[; <" CCPR1 equ 0FBEh ;# ">
+"4362
+[; <" CCPR1L equ 0FBEh ;# ">
+"4369
+[; <" CCPR1H equ 0FBFh ;# ">
+"4376
+[; <" ADCON2 equ 0FC0h ;# ">
+"4447
+[; <" ADCON1 equ 0FC1h ;# ">
+"4532
+[; <" ADCON0 equ 0FC2h ;# ">
+"4651
+[; <" ADRES equ 0FC3h ;# ">
+"4658
+[; <" ADRESL equ 0FC3h ;# ">
+"4665
+[; <" ADRESH equ 0FC4h ;# ">
+"4672
+[; <" SSPCON2 equ 0FC5h ;# ">
+"4734
+[; <" SSPCON1 equ 0FC6h ;# ">
+"4804
+[; <" SSPSTAT equ 0FC7h ;# ">
+"5025
+[; <" SSPADD equ 0FC8h ;# ">
+"5032
+[; <" SSPBUF equ 0FC9h ;# ">
+"5039
+[; <" T2CON equ 0FCAh ;# ">
+"5110
+[; <" PR2 equ 0FCBh ;# ">
+"5115
+[; <" MEMCON equ 0FCBh ;# ">
+"5220
+[; <" TMR2 equ 0FCCh ;# ">
+"5227
+[; <" T1CON equ 0FCDh ;# ">
+"5330
+[; <" TMR1 equ 0FCEh ;# ">
+"5337
+[; <" TMR1L equ 0FCEh ;# ">
+"5344
+[; <" TMR1H equ 0FCFh ;# ">
+"5351
+[; <" RCON equ 0FD0h ;# ">
+"5484
+[; <" WDTCON equ 0FD1h ;# ">
+"5512
+[; <" HLVDCON equ 0FD2h ;# ">
+"5517
+[; <" LVDCON equ 0FD2h ;# ">
+"5782
+[; <" OSCCON equ 0FD3h ;# ">
+"5859
+[; <" T0CON equ 0FD5h ;# ">
+"5936
+[; <" TMR0 equ 0FD6h ;# ">
+"5943
+[; <" TMR0L equ 0FD6h ;# ">
+"5950
+[; <" TMR0H equ 0FD7h ;# ">
+"5957
+[; <" STATUS equ 0FD8h ;# ">
+"6028
+[; <" FSR2 equ 0FD9h ;# ">
+"6035
+[; <" FSR2L equ 0FD9h ;# ">
+"6042
+[; <" FSR2H equ 0FDAh ;# ">
+"6049
+[; <" PLUSW2 equ 0FDBh ;# ">
+"6056
+[; <" PREINC2 equ 0FDCh ;# ">
+"6063
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"6070
+[; <" POSTINC2 equ 0FDEh ;# ">
+"6077
+[; <" INDF2 equ 0FDFh ;# ">
+"6084
+[; <" BSR equ 0FE0h ;# ">
+"6091
+[; <" FSR1 equ 0FE1h ;# ">
+"6098
+[; <" FSR1L equ 0FE1h ;# ">
+"6105
+[; <" FSR1H equ 0FE2h ;# ">
+"6112
+[; <" PLUSW1 equ 0FE3h ;# ">
+"6119
+[; <" PREINC1 equ 0FE4h ;# ">
+"6126
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"6133
+[; <" POSTINC1 equ 0FE6h ;# ">
+"6140
+[; <" INDF1 equ 0FE7h ;# ">
+"6147
+[; <" WREG equ 0FE8h ;# ">
+"6159
+[; <" FSR0 equ 0FE9h ;# ">
+"6166
+[; <" FSR0L equ 0FE9h ;# ">
+"6173
+[; <" FSR0H equ 0FEAh ;# ">
+"6180
+[; <" PLUSW0 equ 0FEBh ;# ">
+"6187
+[; <" PREINC0 equ 0FECh ;# ">
+"6194
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"6201
+[; <" POSTINC0 equ 0FEEh ;# ">
+"6208
+[; <" INDF0 equ 0FEFh ;# ">
+"6215
+[; <" INTCON3 equ 0FF0h ;# ">
+"6307
+[; <" INTCON2 equ 0FF1h ;# ">
+"6377
+[; <" INTCON equ 0FF2h ;# ">
+"6494
+[; <" PROD equ 0FF3h ;# ">
+"6501
+[; <" PRODL equ 0FF3h ;# ">
+"6508
+[; <" PRODH equ 0FF4h ;# ">
+"6515
+[; <" TABLAT equ 0FF5h ;# ">
+"6524
+[; <" TBLPTR equ 0FF6h ;# ">
+"6531
+[; <" TBLPTRL equ 0FF6h ;# ">
+"6538
+[; <" TBLPTRH equ 0FF7h ;# ">
+"6545
+[; <" TBLPTRU equ 0FF8h ;# ">
+"6554
+[; <" PCLAT equ 0FF9h ;# ">
+"6561
+[; <" PC equ 0FF9h ;# ">
+"6568
+[; <" PCL equ 0FF9h ;# ">
+"6575
+[; <" PCLATH equ 0FFAh ;# ">
+"6582
+[; <" PCLATU equ 0FFBh ;# ">
+"6589
+[; <" STKPTR equ 0FFCh ;# ">
+"6695
+[; <" TOS equ 0FFDh ;# ">
+"6702
+[; <" TOSL equ 0FFDh ;# ">
+"6709
+[; <" TOSH equ 0FFEh ;# ">
+"6716
+[; <" TOSU equ 0FFFh ;# ">
+"10 MCAL_Layer/Timer2/hal_timer2.c
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 10: static uint8 tmr2_preload_value;
+[v _tmr2_preload_value `uc ~T0 @X0 1 s ]
+"12
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 12: Std_ReturnType timer2_intialize(const timer2_t *_timer){
+[v _timer2_intialize `(uc ~T0 @X0 1 ef1`*CS273 ]
+{
+[e :U _timer2_intialize ]
+[v __timer `*CS273 ~T0 @X0 1 r1 ]
+[f ]
+"13
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 13:     Std_ReturnType ret = (Std_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"14
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 14:     if(((void*)0) != _timer){
+[e $ ! != -> -> -> 0 `i `*v `*CS273 __timer 275  ]
+{
+"15
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 15:         ret = (Std_ReturnType)0x01;
+[e = _ret -> -> 1 `i `uc ]
+"18
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 18:         (T2CONbits.TMR2ON = 0);
+[e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
+"21
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 21:         (T2CONbits.T2CKPS = _timer->prescaler_value);
+[e = . . _T2CONbits 0 0 -> . *U __timer 2 `uc ]
+"24
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 24:         (T2CONbits.TOUTPS = _timer->postscaler_value);
+[e = . . _T2CONbits 0 2 -> . *U __timer 1 `uc ]
+"27
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 27:         (TMR2 = _timer->preload_value);
+[e = _TMR2 . *U __timer 0 ]
+"28
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 28:         tmr2_preload_value = _timer->preload_value;
+[e = _tmr2_preload_value . *U __timer 0 ]
+"31
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 31:         (T2CONbits.TMR2ON = 1);
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+"32
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 32:     }
+}
+[e :U 275 ]
+"33
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 33:     return ret;
+[e ) _ret ]
+[e $UE 274  ]
+"34
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 34: }
+[e :UE 274 ]
+}
+"36
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 36: Std_ReturnType timer2_deIntialize(const timer2_t *_timer){
+[v _timer2_deIntialize `(uc ~T0 @X0 1 ef1`*CS273 ]
+{
+[e :U _timer2_deIntialize ]
+[v __timer `*CS273 ~T0 @X0 1 r1 ]
+[f ]
+"37
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 37:     Std_ReturnType ret = (Std_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"38
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 38:     if(((void*)0) != _timer){
+[e $ ! != -> -> -> 0 `i `*v `*CS273 __timer 277  ]
+{
+"39
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 39:         ret = (Std_ReturnType)0x01;
+[e = _ret -> -> 1 `i `uc ]
+"41
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 41:         (T2CONbits.TMR2ON = 0);
+[e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
+"42
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 42:     }
+}
+[e :U 277 ]
+"43
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 43:     return ret;
+[e ) _ret ]
+[e $UE 276  ]
+"44
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 44: }
+[e :UE 276 ]
+}
+"46
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 46: Std_ReturnType timer2_write_value(const timer2_t *_timer, uint8 value){
+[v _timer2_write_value `(uc ~T0 @X0 1 ef2`*CS273`uc ]
+{
+[e :U _timer2_write_value ]
+[v __timer `*CS273 ~T0 @X0 1 r1 ]
+[v _value `uc ~T0 @X0 1 r2 ]
+[f ]
+"47
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 47:     Std_ReturnType ret = (Std_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"48
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 48:     if(((void*)0) != _timer){
+[e $ ! != -> -> -> 0 `i `*v `*CS273 __timer 279  ]
+{
+"49
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 49:         ret = (Std_ReturnType)0x01;
+[e = _ret -> -> 1 `i `uc ]
+"50
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 50:         (TMR2 = value);
+[e = _TMR2 _value ]
+"51
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 51:     }
+}
+[e :U 279 ]
+"52
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 52:     return ret;
+[e ) _ret ]
+[e $UE 278  ]
+"53
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 53: }
+[e :UE 278 ]
+}
+"55
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 55: Std_ReturnType timer2_read_value(const timer2_t *_timer, uint8 *value){
+[v _timer2_read_value `(uc ~T0 @X0 1 ef2`*CS273`*uc ]
+{
+[e :U _timer2_read_value ]
+[v __timer `*CS273 ~T0 @X0 1 r1 ]
+[v _value `*uc ~T0 @X0 1 r2 ]
+[f ]
+"56
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 56:     Std_ReturnType ret = (Std_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"57
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 57:     if(((void*)0) != _timer && ((void*)0) != value){
+[e $ ! && != -> -> -> 0 `i `*v `*CS273 __timer != -> -> -> 0 `i `*v `*uc _value 281  ]
+{
+"58
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 58:         ret = (Std_ReturnType)0x01;
+[e = _ret -> -> 1 `i `uc ]
+"59
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 59:         *value = TMR2;
+[e = *U _value _TMR2 ]
+"60
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 60:     }
+}
+[e :U 281 ]
+"61
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 61:     return ret;
+[e ) _ret ]
+[e $UE 280  ]
+"62
+[; ;MCAL_Layer/Timer2/hal_timer2.c: 62: }
+[e :UE 280 ]
+}
