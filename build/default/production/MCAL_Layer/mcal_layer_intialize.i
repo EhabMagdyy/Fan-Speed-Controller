@@ -5213,7 +5213,6 @@ typedef struct{
 
 Std_ReturnType CCP1_PWM_Intialize(const pwm_t *pwm);
 Std_ReturnType CCP1_PWM_Set_Duty(uint8 duty);
-Std_ReturnType CCP_PWM_Start();
 # 13 "MCAL_Layer/mcal_layer_intialize.h" 2
 
 # 1 "MCAL_Layer/Timer2/hal_timer2.h" 1
@@ -5251,9 +5250,6 @@ typedef struct{
 
 
 Std_ReturnType timer2_intialize(const timer2_t *_timer);
-Std_ReturnType timer2_deIntialize(const timer2_t *_timer);
-Std_ReturnType timer2_write_value(const timer2_t *_timer, uint8 value);
-Std_ReturnType timer2_read_value(const timer2_t *_timer, uint8 *value);
 # 14 "MCAL_Layer/mcal_layer_intialize.h" 2
 
 

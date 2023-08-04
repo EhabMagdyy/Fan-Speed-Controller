@@ -1,8 +1,10 @@
 /* 
  * File:   application.c
  * Author: Ehab
- *
- * Created on 27 ?????, 2023, 09:44 ?
+ * 
+ * Fan speed controller with temperature
+ * 
+ * Created on 27, 7, 2023
  */
 
 #include "application.h"

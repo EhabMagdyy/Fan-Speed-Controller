@@ -32,31 +32,3 @@ Std_ReturnType timer2_intialize(const timer2_t *_timer){
     }
     return ret;
 }
-
-Std_ReturnType timer2_deIntialize(const timer2_t *_timer){
-    Std_ReturnType ret = E_NOT_OK;
-    if(NULL != _timer){
-        ret = E_OK;
-        /* Disable Timer0 Module */
-        TIMER2_MODULE_DISABLE();
-    }
-    return ret;
-}
-
-Std_ReturnType timer2_write_value(const timer2_t *_timer, uint8 value){
-    Std_ReturnType ret = E_NOT_OK;
-    if(NULL != _timer){
-        ret = E_OK;
-        TIMER2_WRITE_VALUE(value);
-    }
-    return ret;
-}
-
-Std_ReturnType timer2_read_value(const timer2_t *_timer, uint8 *value){
-    Std_ReturnType ret = E_NOT_OK;
-    if(NULL != _timer && NULL != value){
-        ret = E_OK;
-        *value = TMR2;
-    }
-    return ret;
-}

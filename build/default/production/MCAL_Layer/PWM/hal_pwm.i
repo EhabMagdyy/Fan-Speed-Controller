@@ -5108,7 +5108,6 @@ typedef struct{
 
 Std_ReturnType CCP1_PWM_Intialize(const pwm_t *pwm);
 Std_ReturnType CCP1_PWM_Set_Duty(uint8 duty);
-Std_ReturnType CCP_PWM_Start();
 # 9 "MCAL_Layer/PWM/hal_pwm.c" 2
 
 

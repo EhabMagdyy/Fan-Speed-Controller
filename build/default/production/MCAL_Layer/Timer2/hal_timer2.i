@@ -5106,9 +5106,6 @@ typedef struct{
 
 
 Std_ReturnType timer2_intialize(const timer2_t *_timer);
-Std_ReturnType timer2_deIntialize(const timer2_t *_timer);
-Std_ReturnType timer2_write_value(const timer2_t *_timer, uint8 value);
-Std_ReturnType timer2_read_value(const timer2_t *_timer, uint8 *value);
 # 8 "MCAL_Layer/Timer2/hal_timer2.c" 2
 
 
@@ -5134,34 +5131,6 @@ Std_ReturnType timer2_intialize(const timer2_t *_timer){
 
 
         (T2CONbits.TMR2ON = 1);
-    }
-    return ret;
-}
-
-Std_ReturnType timer2_deIntialize(const timer2_t *_timer){
-    Std_ReturnType ret = (Std_ReturnType)0x00;
-    if(((void*)0) != _timer){
-        ret = (Std_ReturnType)0x01;
-
-        (T2CONbits.TMR2ON = 0);
-    }
-    return ret;
-}
-
-Std_ReturnType timer2_write_value(const timer2_t *_timer, uint8 value){
-    Std_ReturnType ret = (Std_ReturnType)0x00;
-    if(((void*)0) != _timer){
-        ret = (Std_ReturnType)0x01;
-        (TMR2 = value);
-    }
-    return ret;
-}
-
-Std_ReturnType timer2_read_value(const timer2_t *_timer, uint8 *value){
-    Std_ReturnType ret = (Std_ReturnType)0x00;
-    if(((void*)0) != _timer && ((void*)0) != value){
-        ret = (Std_ReturnType)0x01;
-        *value = TMR2;
     }
     return ret;
 }

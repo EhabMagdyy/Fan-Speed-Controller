@@ -3,11 +3,6 @@
 [d edition pro ]
 [d chip 18F4620 ]
 [d frameptr 4065 ]
-"45 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\ECU_Layer/LCD/ecu_lcd.c
-[e E3389 . `uc
-GPIO_LOW 0
-GPIO_HIGH 1
-]
 "24 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\ECU_Layer/DC_Motor/ecu_dc_motor.c
 [e E3389 . `uc
 GPIO_LOW 0
@@ -192,7 +187,7 @@ CCP1_TIMER2_PRESCALER_DIV_4 4
 CCP1_TIMER2_PRESCALER_DIV_16 16
 ]
 "27
-[e E3525 . `uc
+[e E3524 . `uc
 TIMER2_POSTSCALER_DIV_1 0
 TIMER2_POSTSCALER_DIV_2 1
 TIMER2_POSTSCALER_DIV_3 2
@@ -210,12 +205,12 @@ TIMER2_POSTSCALER_DIV_14 13
 TIMER2_POSTSCALER_DIV_15 14
 TIMER2_POSTSCALER_DIV_16 15
 ]
-[e E3520 . `uc
+[e E3519 . `uc
 TIMER2_PRESCALER_DIV_1 0
 TIMER2_PRESCALER_DIV_4 1
 TIMER2_PRESCALER_DIV_16 2
 ]
-"30 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\application.c
+"32 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\application.c
 [e E3445 . `uc
 ADC_0_TAD 0
 ADC_2_TAD 1
@@ -250,9 +245,14 @@ ANALOG_CHANNEL_AN10 10
 ANALOG_CHANNEL_AN11 11
 ANALOG_CHANNEL_AN12 12
 ]
-"17
+"45 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\ECU_Layer/LCD/ecu_lcd.c
+[e E3389 . `uc
+GPIO_LOW 0
+GPIO_HIGH 1
+]
+"19 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\application.c
 [v _main main `(i  1 e 2 0 ]
-"75
+"77
 [v _application_intialize application_intialize `(uc  1 e 1 0 ]
 "7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -364,21 +364,21 @@ ANALOG_CHANNEL_AN12 12
 [v _CCP1_PWM_Set_Duty CCP1_PWM_Set_Duty `(uc  1 e 1 0 ]
 "12 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\MCAL_Layer/Timer2/hal_timer2.c
 [v _timer2_intialize timer2_intialize `(uc  1 e 1 0 ]
-"10 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\application.c
+"12 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\application.c
 [v _ret ret `uc  1 e 1 0 ]
-"12
+"14
 [v _lm35_value lm35_value `us  1 e 2 0 ]
 [v _lm35_value_in_celsuis lm35_value_in_celsuis `us  1 e 2 0 ]
-"13
-[v _lm35_value_text lm35_value_text `[4]uc  1 e 4 0 ]
 "15
+[v _lm35_value_text lm35_value_text `[4]uc  1 e 4 0 ]
+"17
 [v _temperature_level temperature_level `uc  1 e 1 0 ]
-[s S687 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S549 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 TOUTPS 1 0 :4:3 
 ]
 "5058 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include/proc/pic18f4620.h
-[s S691 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S553 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -386,8 +386,8 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[u S699 . 1 `S687 1 . 1 0 `S691 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES699  1 e 1 @4042 ]
+[u S561 . 1 `S549 1 . 1 0 `S553 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES561  1 e 1 @4042 ]
 "5218
 [v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
 "53 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4620.h
@@ -414,7 +414,7 @@ ANALOG_CHANNEL_AN12 12
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 "1825
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S599 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S461 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -424,7 +424,7 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1857
-[s S608 . 1 `uc 1 RC0 1 0 :1:0 
+[s S470 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -433,18 +433,18 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S617 . 1 `S599 1 . 1 0 `S608 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES617  1 e 1 @3988 ]
+[u S479 . 1 `S461 1 . 1 0 `S470 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES479  1 e 1 @3988 ]
 "2047
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "2269
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-[s S560 . 1 `uc 1 CCP1M 1 0 :4:0 
+[s S422 . 1 `uc 1 CCP1M 1 0 :4:0 
 `uc 1 DC1B 1 0 :2:4 
 `uc 1 P1M 1 0 :2:6 
 ]
 "4283
-[s S564 . 1 `uc 1 CCP1M0 1 0 :1:0 
+[s S426 . 1 `uc 1 CCP1M0 1 0 :1:0 
 `uc 1 CCP1M1 1 0 :1:1 
 `uc 1 CCP1M2 1 0 :1:2 
 `uc 1 CCP1M3 1 0 :1:3 
@@ -453,79 +453,79 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 P1M0 1 0 :1:6 
 `uc 1 P1M1 1 0 :1:7 
 ]
-[s S573 . 1 `uc 1 . 1 0 :4:0 
+[s S435 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 DC1B0 1 0 :1:4 
 `uc 1 DC1B1 1 0 :1:5 
 ]
-[u S577 . 1 `S560 1 . 1 0 `S564 1 . 1 0 `S573 1 . 1 0 ]
-[v _CCP1CONbits CCP1CONbits `VES577  1 e 1 @4029 ]
+[u S439 . 1 `S422 1 . 1 0 `S426 1 . 1 0 `S435 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES439  1 e 1 @4029 ]
 "4360
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
-[s S353 . 1 `uc 1 ADCS 1 0 :3:0 
+[s S215 . 1 `uc 1 ADCS 1 0 :3:0 
 `uc 1 ACQT 1 0 :3:3 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "4395
-[s S358 . 1 `uc 1 ADCS0 1 0 :1:0 
+[s S220 . 1 `uc 1 ADCS0 1 0 :1:0 
 `uc 1 ADCS1 1 0 :1:1 
 `uc 1 ADCS2 1 0 :1:2 
 `uc 1 ACQT0 1 0 :1:3 
 `uc 1 ACQT1 1 0 :1:4 
 `uc 1 ACQT2 1 0 :1:5 
 ]
-[u S365 . 1 `S353 1 . 1 0 `S358 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES365  1 e 1 @4032 ]
-[s S381 . 1 `uc 1 PCFG 1 0 :4:0 
+[u S227 . 1 `S215 1 . 1 0 `S220 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES227  1 e 1 @4032 ]
+[s S243 . 1 `uc 1 PCFG 1 0 :4:0 
 `uc 1 VCFG 1 0 :2:4 
 ]
 "4470
-[s S384 . 1 `uc 1 PCFG0 1 0 :1:0 
+[s S246 . 1 `uc 1 PCFG0 1 0 :1:0 
 `uc 1 PCFG1 1 0 :1:1 
 `uc 1 PCFG2 1 0 :1:2 
 `uc 1 PCFG3 1 0 :1:3 
 `uc 1 VCFG0 1 0 :1:4 
 `uc 1 VCFG1 1 0 :1:5 
 ]
-[s S391 . 1 `uc 1 . 1 0 :3:0 
+[s S253 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CHSN3 1 0 :1:3 
 `uc 1 VCFG01 1 0 :1:4 
 `uc 1 VCFG11 1 0 :1:5 
 ]
-[u S396 . 1 `S381 1 . 1 0 `S384 1 . 1 0 `S391 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES396  1 e 1 @4033 ]
-[s S285 . 1 `uc 1 . 1 0 :1:0 
+[u S258 . 1 `S243 1 . 1 0 `S246 1 . 1 0 `S253 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES258  1 e 1 @4033 ]
+[s S147 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "4574
-[s S288 . 1 `uc 1 ADON 1 0 :1:0 
+[s S150 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S292 . 1 `uc 1 . 1 0 :1:0 
+[s S154 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S299 . 1 `uc 1 . 1 0 :1:0 
+[s S161 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S302 . 1 `uc 1 . 1 0 :1:0 
+[s S164 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S305 . 1 `uc 1 . 1 0 :1:0 
+[s S167 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S308 . 1 `uc 1 . 1 0 :1:0 
+[s S170 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[s S311 . 1 `uc 1 . 1 0 :1:0 
+[s S173 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S314 . 1 `S285 1 . 1 0 `S288 1 . 1 0 `S292 1 . 1 0 `S299 1 . 1 0 `S302 1 . 1 0 `S305 1 . 1 0 `S308 1 . 1 0 `S311 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES314  1 e 1 @4034 ]
+[u S176 . 1 `S147 1 . 1 0 `S150 1 . 1 0 `S154 1 . 1 0 `S161 1 . 1 0 `S164 1 . 1 0 `S167 1 . 1 0 `S170 1 . 1 0 `S173 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES176  1 e 1 @4034 ]
 "4656
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "4663
@@ -545,50 +545,50 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 logic 1 0 :1:7 
 ]
 "10 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\ECU_Layer/ecu_layer_intialize.c
-[s S180 . 2 `[2]S24 1 motor_pin 2 0 ]
-[v _motor motor `S180  1 e 2 0 ]
+[s S29 . 2 `[2]S24 1 motor_pin 2 0 ]
+[v _motor motor `S29  1 e 2 0 ]
 "21
-[s S29 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
-[v _lcd lcd `S29  1 e 10 0 ]
+[s S82 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
+[v _lcd lcd `S82  1 e 10 0 ]
 "10 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\MCAL_Layer/GPIO/hal_gpio.c
 [v _tris_registers tris_registers `[5]*.39VEuc  1 e 10 0 ]
 "11
 [v _port_registers port_registers `[5]*.39VEuc  1 e 10 0 ]
 "12
 [v _lat_registers lat_registers `[5]*.39VEuc  1 e 10 0 ]
-[s S278 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
+[s S140 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
 `uc 1 voltage_refrence 1 3 :1:1 
 `uc 1 adc_reserved 1 3 :6:2 
 ]
 "11 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\MCAL_Layer/mcal_layer_intialize.c
-[v _adc adc `S278  1 e 4 0 ]
-[s S556 . 6 `ul 1 pwm_frequency 4 0 `E3394 1 timer2_postscaler_value 1 4 `E3389 1 timer2_prescaler_value 1 5 ]
+[v _adc adc `S140  1 e 4 0 ]
+[s S418 . 6 `ul 1 pwm_frequency 4 0 `E3394 1 timer2_postscaler_value 1 4 `E3389 1 timer2_prescaler_value 1 5 ]
 "20
-[v _pwm pwm `S556  1 e 6 0 ]
-[s S683 . 3 `uc 1 preload_value 1 0 `E3394 1 postscaler_value 1 1 `E3389 1 prescaler_value 1 2 ]
+[v _pwm pwm `S418  1 e 6 0 ]
+[s S545 . 3 `uc 1 preload_value 1 0 `E3394 1 postscaler_value 1 1 `E3389 1 prescaler_value 1 2 ]
 "27
-[v _timer2 timer2 `S683  1 e 3 0 ]
+[v _timer2 timer2 `S545  1 e 3 0 ]
 "10 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\MCAL_Layer/Timer2/hal_timer2.c
 [v _tmr2_preload_value tmr2_preload_value `uc  1 s 1 tmr2_preload_value ]
-"17 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\application.c
+"19 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\application.c
 [v _main main `(i  1 e 2 0 ]
 {
-"73
+"75
 } 0
 "12 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\roundf.c
 [v _roundf roundf `(f  1 e 4 0 ]
 {
 "16
 [v roundf@y y `f  1 a 4 86 ]
-[u S1532 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1544 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "14
-[v roundf@u u `S1532  1 a 4 82 ]
+[v roundf@u u `S1544  1 a 4 82 ]
 "15
 [v roundf@e e `i  1 a 2 76 ]
 "12
 [v roundf@x x `f  1 p 4 64 ]
 "13
-[v roundf@F527 F527 `S1532  1 s 4 F527 ]
+[v roundf@F527 F527 `S1544  1 s 4 F527 ]
 "36
 } 0
 "245 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
@@ -638,8 +638,8 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 logic 1 0 :1:7 
 ]
 "20
-[s S180 . 2 `[2]S24 1 motor_pin 2 0 ]
-[v motor_move@motor motor `*.39CS180  1 p 2 10 ]
+[s S29 . 2 `[2]S24 1 motor_pin 2 0 ]
+[v motor_move@motor motor `*.39CS29  1 p 2 10 ]
 "28
 } 0
 "122 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\ECU_Layer/LCD/ecu_lcd.c
@@ -659,10 +659,10 @@ ANALOG_CHANNEL_AN12 12
 "9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S1386 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[u S1398 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
 "13
-[s S1389 _IO_FILE 11 `S1386 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v sprintf@f f `S1389  1 a 11 96 ]
+[s S1401 _IO_FILE 11 `S1398 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S1401  1 a 11 96 ]
 "12
 [v sprintf@ap ap `[1]*.39v  1 a 2 94 ]
 "9
@@ -675,9 +675,9 @@ ANALOG_CHANNEL_AN12 12
 {
 "1523
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 86 ]
-[s S1421 _IO_FILE 0 ]
+[s S1433 _IO_FILE 0 ]
 "1520
-[v vfprintf@fp fp `*.39S1421  1 p 2 80 ]
+[v vfprintf@fp fp `*.39S1433  1 p 2 80 ]
 [v vfprintf@fmt fmt `*.25Cuc  1 p 2 82 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 84 ]
 "1543
@@ -685,14 +685,14 @@ ANALOG_CHANNEL_AN12 12
 "1007
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S1439 . 8 `o 1 ll 8 0 `uo 1 llu 8 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
+[u S1451 . 8 `o 1 ll 8 0 `uo 1 llu 8 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
 "1016
-[v vfpfcnvrt@convarg convarg `S1439  1 a 8 70 ]
+[v vfpfcnvrt@convarg convarg `S1451  1 a 8 70 ]
 "1009
 [v vfpfcnvrt@cp cp `*.25uc  1 a 2 78 ]
-[s S1421 _IO_FILE 0 ]
+[s S1433 _IO_FILE 0 ]
 "1007
-[v vfpfcnvrt@fp fp `*.39S1421  1 p 2 62 ]
+[v vfpfcnvrt@fp fp `*.39S1433  1 p 2 62 ]
 [v vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 64 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 66 ]
 "1517
@@ -708,9 +708,9 @@ ANALOG_CHANNEL_AN12 12
 [v dtoa@p p `i  1 a 2 47 ]
 "445
 [v dtoa@s s `uc  1 a 1 61 ]
-[s S1421 _IO_FILE 0 ]
+[s S1433 _IO_FILE 0 ]
 "443
-[v dtoa@fp fp `*.39S1421  1 p 2 27 ]
+[v dtoa@fp fp `*.39S1433  1 p 2 27 ]
 [v dtoa@d d `o  1 p 8 29 ]
 "502
 } 0
@@ -720,9 +720,9 @@ ANALOG_CHANNEL_AN12 12
 "135
 [v pad@w w `i  1 a 2 25 ]
 [v pad@i i `i  1 a 2 23 ]
-[s S1421 _IO_FILE 0 ]
+[s S1433 _IO_FILE 0 ]
 "133
-[v pad@fp fp `*.39S1421  1 p 2 16 ]
+[v pad@fp fp `*.39S1433  1 p 2 16 ]
 [v pad@buf buf `*.39uc  1 p 2 18 ]
 [v pad@p p `i  1 p 2 20 ]
 "164
@@ -736,18 +736,18 @@ ANALOG_CHANNEL_AN12 12
 [v fputs@c c `uc  1 a 1 13 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 9 ]
-[u S1386 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S1389 _IO_FILE 11 `S1386 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputs@fp fp `*.39S1389  1 p 2 11 ]
+[u S1398 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1401 _IO_FILE 11 `S1398 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.39S1401  1 p 2 11 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 0 ]
-[u S1386 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S1389 _IO_FILE 11 `S1386 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.39S1389  1 p 2 2 ]
+[u S1398 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1401 _IO_FILE 11 `S1398 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.39S1401  1 p 2 2 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\putch.c
@@ -809,8 +809,8 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 logic 1 0 :1:7 
 ]
 "88
-[s S29 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
-[v lcd_8bit_send_string_pos@lcd lcd `*.39CS29  1 p 2 29 ]
+[s S82 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
+[v lcd_8bit_send_string_pos@lcd lcd `*.39CS82  1 p 2 29 ]
 [v lcd_8bit_send_string_pos@row row `uc  1 p 1 31 ]
 [v lcd_8bit_send_string_pos@colomn colomn `uc  1 p 1 32 ]
 [v lcd_8bit_send_string_pos@string string `*.35uc  1 p 2 33 ]
@@ -827,8 +827,8 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 logic 1 0 :1:7 
 ]
 "77
-[s S29 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
-[v lcd_8bit_send_string@lcd lcd `*.39CS29  1 p 2 22 ]
+[s S82 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
+[v lcd_8bit_send_string@lcd lcd `*.39CS82  1 p 2 22 ]
 [v lcd_8bit_send_string@string string `*.35uc  1 p 2 24 ]
 "86
 } 0
@@ -843,8 +843,8 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 logic 1 0 :1:7 
 ]
 "67
-[s S29 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
-[v lcd_8bit_send_char_pos@lcd lcd `*.39CS29  1 p 2 29 ]
+[s S82 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
+[v lcd_8bit_send_char_pos@lcd lcd `*.39CS82  1 p 2 29 ]
 [v lcd_8bit_send_char_pos@row row `uc  1 p 1 31 ]
 [v lcd_8bit_send_char_pos@colomn colomn `uc  1 p 1 32 ]
 [v lcd_8bit_send_char_pos@data data `uc  1 p 1 33 ]
@@ -861,8 +861,8 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 logic 1 0 :1:7 
 ]
 "109
-[s S29 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
-[v lcd_8bit_set_cursor@lcd lcd `*.39CS29  1 p 2 22 ]
+[s S82 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
+[v lcd_8bit_set_cursor@lcd lcd `*.39CS82  1 p 2 22 ]
 [v lcd_8bit_set_cursor@row row `uc  1 p 1 24 ]
 [v lcd_8bit_set_cursor@colomn colomn `uc  1 p 1 25 ]
 "120
@@ -880,17 +880,17 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 logic 1 0 :1:7 
 ]
 "54
-[s S29 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
-[v lcd_8bit_send_char@lcd lcd `*.39CS29  1 p 2 13 ]
+[s S82 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
+[v lcd_8bit_send_char@lcd lcd `*.39CS82  1 p 2 13 ]
 [v lcd_8bit_send_char@data data `uc  1 p 1 15 ]
 "65
 } 0
-"75 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\application.c
+"77 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\application.c
 [v _application_intialize application_intialize `(uc  1 e 1 0 ]
 {
-"76
+"78
 [v application_intialize@ret ret `uc  1 a 1 38 ]
-"82
+"84
 } 0
 "34 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\MCAL_Layer/mcal_layer_intialize.c
 [v _mcal_layer_int mcal_layer_int `(uc  1 e 1 0 ]
@@ -904,9 +904,8 @@ ANALOG_CHANNEL_AN12 12
 {
 "13
 [v timer2_intialize@ret ret `uc  1 a 1 3 ]
-[s S683 . 3 `uc 1 preload_value 1 0 `E3394 1 postscaler_value 1 1 `E3389 1 prescaler_value 1 2 ]
 "12
-[v timer2_intialize@_timer _timer `*.39CS683  1 p 2 0 ]
+[v timer2_intialize@_timer _timer `*.39CS545  1 p 2 0 ]
 "34
 } 0
 "11 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\MCAL_Layer/PWM/hal_pwm.c
@@ -914,9 +913,9 @@ ANALOG_CHANNEL_AN12 12
 {
 "13
 [v CCP1_PWM_Intialize@ret ret `uc  1 a 1 36 ]
-[s S556 . 6 `ul 1 pwm_frequency 4 0 `E3394 1 timer2_postscaler_value 1 4 `E3389 1 timer2_prescaler_value 1 5 ]
+[s S418 . 6 `ul 1 pwm_frequency 4 0 `E3394 1 timer2_postscaler_value 1 4 `E3389 1 timer2_prescaler_value 1 5 ]
 "11
-[v CCP1_PWM_Intialize@pwm pwm `*.39CS556  1 p 2 25 ]
+[v CCP1_PWM_Intialize@pwm pwm `*.39CS418  1 p 2 25 ]
 "31
 } 0
 "15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul32.c
@@ -946,12 +945,12 @@ ANALOG_CHANNEL_AN12 12
 {
 "19
 [v ADC_intialize@ret ret `uc  1 a 1 7 ]
-[s S278 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
+[s S140 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
 `uc 1 voltage_refrence 1 3 :1:1 
 `uc 1 adc_reserved 1 3 :6:2 
 ]
 "17
-[v ADC_intialize@_adc _adc `*.39CS278  1 p 2 4 ]
+[v ADC_intialize@_adc _adc `*.39CS140  1 p 2 4 ]
 "55
 } 0
 "65 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\ECU_Layer/ecu_layer_intialize.c
@@ -972,8 +971,8 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 logic 1 0 :1:7 
 ]
 "10
-[s S180 . 2 `[2]S24 1 motor_pin 2 0 ]
-[v motor_intialize@motor motor `*.39CS180  1 p 2 14 ]
+[s S29 . 2 `[2]S24 1 motor_pin 2 0 ]
+[v motor_intialize@motor motor `*.39CS29  1 p 2 14 ]
 "18
 } 0
 "14 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\ECU_Layer/LCD/ecu_lcd.c
@@ -989,8 +988,8 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 logic 1 0 :1:7 
 ]
 "14
-[s S29 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
-[v lcd_8bit_intialize@lcd lcd `*.39CS29  1 p 2 22 ]
+[s S82 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
+[v lcd_8bit_intialize@lcd lcd `*.39CS82  1 p 2 22 ]
 "39
 } 0
 "41
@@ -1006,8 +1005,8 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 logic 1 0 :1:7 
 ]
 "41
-[s S29 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
-[v lcd_8bit_send_command@lcd lcd `*.39CS29  1 p 2 13 ]
+[s S82 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
+[v lcd_8bit_send_command@lcd lcd `*.39CS82  1 p 2 13 ]
 [v lcd_8bit_send_command@command command `uc  1 p 1 15 ]
 "52
 } 0
@@ -1022,8 +1021,8 @@ ANALOG_CHANNEL_AN12 12
 `uc 1 logic 1 0 :1:7 
 ]
 "98
-[s S29 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
-[v send_8bit_enable_signal@lcd lcd `*.39CS29  1 p 2 10 ]
+[s S82 . 10 `S24 1 lcd_rs 1 0 `S24 1 lcd_enable 1 1 `[8]S24 1 data_lines 8 2 ]
+[v send_8bit_enable_signal@lcd lcd `*.39CS82  1 p 2 10 ]
 "107
 } 0
 "64 C:\Users\Ehab\Documents\MCU_Projects\Fan_Speed_Controller\Fan_Speed_Controller.X\MCAL_Layer/GPIO/hal_gpio.c
@@ -1110,17 +1109,17 @@ ANALOG_CHANNEL_AN12 12
 "8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1244 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1256 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1249 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1252 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1244 1 fAsBytes 4 0 `S1249 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1252  1 a 4 58 ]
+[s S1261 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1264 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1256 1 fAsBytes 4 0 `S1261 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1264  1 a 4 58 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 52 ]
-[s S1320 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1332 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1323 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1320 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1323  1 a 2 62 ]
+[u S1335 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1332 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1335  1 a 2 62 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 57 ]
 "11
@@ -1157,12 +1156,12 @@ ANALOG_CHANNEL_AN12 12
 {
 "125
 [v ADC_getConversionBlocking@ret ret `uc  1 a 1 16 ]
-[s S278 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
+[s S140 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
 `uc 1 voltage_refrence 1 3 :1:1 
 `uc 1 adc_reserved 1 3 :6:2 
 ]
 "122
-[v ADC_getConversionBlocking@_adc _adc `*.39CS278  1 p 2 11 ]
+[v ADC_getConversionBlocking@_adc _adc `*.39CS140  1 p 2 11 ]
 [v ADC_getConversionBlocking@channel channel `E3430  1 p 1 13 ]
 "123
 [v ADC_getConversionBlocking@result result `*.39us  1 p 2 14 ]
@@ -1173,12 +1172,12 @@ ANALOG_CHANNEL_AN12 12
 {
 "81
 [v ADC_startConversion@ret ret `uc  1 a 1 2 ]
-[s S278 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
+[s S140 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
 `uc 1 voltage_refrence 1 3 :1:1 
 `uc 1 adc_reserved 1 3 :6:2 
 ]
 "80
-[v ADC_startConversion@_adc _adc `*.39CS278  1 p 2 0 ]
+[v ADC_startConversion@_adc _adc `*.39CS140  1 p 2 0 ]
 "88
 } 0
 "63
@@ -1186,12 +1185,12 @@ ANALOG_CHANNEL_AN12 12
 {
 "65
 [v ADC_selectChannel@ret ret `uc  1 a 1 8 ]
-[s S278 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
+[s S140 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
 `uc 1 voltage_refrence 1 3 :1:1 
 `uc 1 adc_reserved 1 3 :6:2 
 ]
 "63
-[v ADC_selectChannel@_adc _adc `*.39CS278  1 p 2 4 ]
+[v ADC_selectChannel@_adc _adc `*.39CS140  1 p 2 4 ]
 [v ADC_selectChannel@channel channel `E3430  1 p 1 6 ]
 "73
 } 0
@@ -1212,12 +1211,12 @@ ANALOG_CHANNEL_AN12 12
 {
 "98
 [v ADC_getConversionResult@ret ret `uc  1 a 1 10 ]
-[s S278 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
+[s S140 . 4 `E3445 1 aquisition_time 1 0 `E3455 1 conversion_clock 1 1 `E3430 1 channel 1 2 `uc 1 format_justification 1 3 :1:0 
 `uc 1 voltage_refrence 1 3 :1:1 
 `uc 1 adc_reserved 1 3 :6:2 
 ]
 "96
-[v ADC_getConversionResult@_adc _adc `*.39CS278  1 p 2 0 ]
+[v ADC_getConversionResult@_adc _adc `*.39CS140  1 p 2 0 ]
 [v ADC_getConversionResult@result result `*.39us  1 p 2 2 ]
 "113
 } 0

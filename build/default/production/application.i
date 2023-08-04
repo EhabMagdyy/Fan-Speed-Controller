@@ -7,13 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "application.c" 2
-
-
-
-
-
-
-
+# 10 "application.c"
 # 1 "./application.h" 1
 # 12 "./application.h"
 # 1 "./MCAL_Layer/mcal_layer_intialize.h" 1
@@ -5215,7 +5209,6 @@ typedef struct{
 
 Std_ReturnType CCP1_PWM_Intialize(const pwm_t *pwm);
 Std_ReturnType CCP1_PWM_Set_Duty(uint8 duty);
-Std_ReturnType CCP_PWM_Start();
 # 13 "./MCAL_Layer/mcal_layer_intialize.h" 2
 
 # 1 "./MCAL_Layer/Timer2/hal_timer2.h" 1
@@ -5253,9 +5246,6 @@ typedef struct{
 
 
 Std_ReturnType timer2_intialize(const timer2_t *_timer);
-Std_ReturnType timer2_deIntialize(const timer2_t *_timer);
-Std_ReturnType timer2_write_value(const timer2_t *_timer, uint8 value);
-Std_ReturnType timer2_read_value(const timer2_t *_timer, uint8 *value);
 # 14 "./MCAL_Layer/mcal_layer_intialize.h" 2
 
 
@@ -5312,7 +5302,7 @@ Std_ReturnType ecu_layer_int(void);
 
 
 Std_ReturnType application_intialize(void);
-# 8 "application.c" 2
+# 10 "application.c" 2
 
 
 Std_ReturnType ret = (Std_ReturnType)0x01;

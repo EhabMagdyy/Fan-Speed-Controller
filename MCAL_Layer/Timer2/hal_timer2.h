@@ -58,10 +58,6 @@ typedef struct{
 
 /*-------------- Function Declarations-------------- */
 Std_ReturnType timer2_intialize(const timer2_t *_timer);
-Std_ReturnType timer2_deIntialize(const timer2_t *_timer);
-Std_ReturnType timer2_write_value(const timer2_t *_timer, uint8 value);
-Std_ReturnType timer2_read_value(const timer2_t *_timer, uint8 *value);
-
 
 #endif	/* HAL_TIMER2_H */
 

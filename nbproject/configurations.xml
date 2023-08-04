@@ -40,10 +40,10 @@
                    projectFiles="true">
       <logicalFolder name="ECU_Layer" displayName="ECU_Layer" projectFiles="true">
         <logicalFolder name="DC_Motor" displayName="DC_Motor" projectFiles="true">
-          <logicalFolder name="LCD" displayName="LCD" projectFiles="true">
-            <itemPath>ECU_Layer/LCD/ecu_lcd.c</itemPath>
-          </logicalFolder>
           <itemPath>ECU_Layer/DC_Motor/ecu_dc_motor.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="LCD" displayName="LCD" projectFiles="true">
+          <itemPath>ECU_Layer/LCD/ecu_lcd.c</itemPath>
         </logicalFolder>
         <itemPath>ECU_Layer/ecu_layer_intialize.c</itemPath>
       </logicalFolder>

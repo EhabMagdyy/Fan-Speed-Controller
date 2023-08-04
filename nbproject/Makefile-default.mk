@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=ECU_Layer/LCD/ecu_lcd.c ECU_Layer/DC_Motor/ecu_dc_motor.c ECU_Layer/ecu_layer_intialize.c MCAL_Layer/ADC/hal_adc.c MCAL_Layer/GPIO/hal_gpio.c MCAL_Layer/PWM/hal_pwm.c MCAL_Layer/Timer2/hal_timer2.c MCAL_Layer/mcal_layer_intialize.c application.c
+SOURCEFILES_QUOTED_IF_SPACED=ECU_Layer/DC_Motor/ecu_dc_motor.c ECU_Layer/ecu_layer_intialize.c MCAL_Layer/ADC/hal_adc.c MCAL_Layer/GPIO/hal_gpio.c MCAL_Layer/PWM/hal_pwm.c MCAL_Layer/Timer2/hal_timer2.c MCAL_Layer/mcal_layer_intialize.c application.c ECU_Layer/LCD/ecu_lcd.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1 ${OBJECTDIR}/ECU_Layer/DC_Motor/ecu_dc_motor.p1 ${OBJECTDIR}/ECU_Layer/ecu_layer_intialize.p1 ${OBJECTDIR}/MCAL_Layer/ADC/hal_adc.p1 ${OBJECTDIR}/MCAL_Layer/GPIO/hal_gpio.p1 ${OBJECTDIR}/MCAL_Layer/PWM/hal_pwm.p1 ${OBJECTDIR}/MCAL_Layer/Timer2/hal_timer2.p1 ${OBJECTDIR}/MCAL_Layer/mcal_layer_intialize.p1 ${OBJECTDIR}/application.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1.d ${OBJECTDIR}/ECU_Layer/DC_Motor/ecu_dc_motor.p1.d ${OBJECTDIR}/ECU_Layer/ecu_layer_intialize.p1.d ${OBJECTDIR}/MCAL_Layer/ADC/hal_adc.p1.d ${OBJECTDIR}/MCAL_Layer/GPIO/hal_gpio.p1.d ${OBJECTDIR}/MCAL_Layer/PWM/hal_pwm.p1.d ${OBJECTDIR}/MCAL_Layer/Timer2/hal_timer2.p1.d ${OBJECTDIR}/MCAL_Layer/mcal_layer_intialize.p1.d ${OBJECTDIR}/application.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/ECU_Layer/DC_Motor/ecu_dc_motor.p1 ${OBJECTDIR}/ECU_Layer/ecu_layer_intialize.p1 ${OBJECTDIR}/MCAL_Layer/ADC/hal_adc.p1 ${OBJECTDIR}/MCAL_Layer/GPIO/hal_gpio.p1 ${OBJECTDIR}/MCAL_Layer/PWM/hal_pwm.p1 ${OBJECTDIR}/MCAL_Layer/Timer2/hal_timer2.p1 ${OBJECTDIR}/MCAL_Layer/mcal_layer_intialize.p1 ${OBJECTDIR}/application.p1 ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/ECU_Layer/DC_Motor/ecu_dc_motor.p1.d ${OBJECTDIR}/ECU_Layer/ecu_layer_intialize.p1.d ${OBJECTDIR}/MCAL_Layer/ADC/hal_adc.p1.d ${OBJECTDIR}/MCAL_Layer/GPIO/hal_gpio.p1.d ${OBJECTDIR}/MCAL_Layer/PWM/hal_pwm.p1.d ${OBJECTDIR}/MCAL_Layer/Timer2/hal_timer2.p1.d ${OBJECTDIR}/MCAL_Layer/mcal_layer_intialize.p1.d ${OBJECTDIR}/application.p1.d ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1 ${OBJECTDIR}/ECU_Layer/DC_Motor/ecu_dc_motor.p1 ${OBJECTDIR}/ECU_Layer/ecu_layer_intialize.p1 ${OBJECTDIR}/MCAL_Layer/ADC/hal_adc.p1 ${OBJECTDIR}/MCAL_Layer/GPIO/hal_gpio.p1 ${OBJECTDIR}/MCAL_Layer/PWM/hal_pwm.p1 ${OBJECTDIR}/MCAL_Layer/Timer2/hal_timer2.p1 ${OBJECTDIR}/MCAL_Layer/mcal_layer_intialize.p1 ${OBJECTDIR}/application.p1
+OBJECTFILES=${OBJECTDIR}/ECU_Layer/DC_Motor/ecu_dc_motor.p1 ${OBJECTDIR}/ECU_Layer/ecu_layer_intialize.p1 ${OBJECTDIR}/MCAL_Layer/ADC/hal_adc.p1 ${OBJECTDIR}/MCAL_Layer/GPIO/hal_gpio.p1 ${OBJECTDIR}/MCAL_Layer/PWM/hal_pwm.p1 ${OBJECTDIR}/MCAL_Layer/Timer2/hal_timer2.p1 ${OBJECTDIR}/MCAL_Layer/mcal_layer_intialize.p1 ${OBJECTDIR}/application.p1 ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1
 
 # Source Files
-SOURCEFILES=ECU_Layer/LCD/ecu_lcd.c ECU_Layer/DC_Motor/ecu_dc_motor.c ECU_Layer/ecu_layer_intialize.c MCAL_Layer/ADC/hal_adc.c MCAL_Layer/GPIO/hal_gpio.c MCAL_Layer/PWM/hal_pwm.c MCAL_Layer/Timer2/hal_timer2.c MCAL_Layer/mcal_layer_intialize.c application.c
+SOURCEFILES=ECU_Layer/DC_Motor/ecu_dc_motor.c ECU_Layer/ecu_layer_intialize.c MCAL_Layer/ADC/hal_adc.c MCAL_Layer/GPIO/hal_gpio.c MCAL_Layer/PWM/hal_pwm.c MCAL_Layer/Timer2/hal_timer2.c MCAL_Layer/mcal_layer_intialize.c application.c ECU_Layer/LCD/ecu_lcd.c
 
 
 
@@ -94,14 +94,6 @@ MP_PROCESSOR_OPTION=18F4620
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1: ECU_Layer/LCD/ecu_lcd.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/ECU_Layer/LCD" 
-	@${RM} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1.d 
-	@${RM} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1 ECU_Layer/LCD/ecu_lcd.c 
-	@-${MV} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.d ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 ${OBJECTDIR}/ECU_Layer/DC_Motor/ecu_dc_motor.p1: ECU_Layer/DC_Motor/ecu_dc_motor.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/ECU_Layer/DC_Motor" 
 	@${RM} ${OBJECTDIR}/ECU_Layer/DC_Motor/ecu_dc_motor.p1.d 
@@ -166,15 +158,15 @@ ${OBJECTDIR}/application.p1: application.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/application.d ${OBJECTDIR}/application.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/application.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-else
 ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1: ECU_Layer/LCD/ecu_lcd.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/ECU_Layer/LCD" 
 	@${RM} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1.d 
 	@${RM} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1 ECU_Layer/LCD/ecu_lcd.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1 ECU_Layer/LCD/ecu_lcd.c 
 	@-${MV} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.d ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+else
 ${OBJECTDIR}/ECU_Layer/DC_Motor/ecu_dc_motor.p1: ECU_Layer/DC_Motor/ecu_dc_motor.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/ECU_Layer/DC_Motor" 
 	@${RM} ${OBJECTDIR}/ECU_Layer/DC_Motor/ecu_dc_motor.p1.d 
@@ -238,6 +230,14 @@ ${OBJECTDIR}/application.p1: application.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/application.p1 application.c 
 	@-${MV} ${OBJECTDIR}/application.d ${OBJECTDIR}/application.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/application.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1: ECU_Layer/LCD/ecu_lcd.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/ECU_Layer/LCD" 
+	@${RM} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1.d 
+	@${RM} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1 ECU_Layer/LCD/ecu_lcd.c 
+	@-${MV} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.d ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/ECU_Layer/LCD/ecu_lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
